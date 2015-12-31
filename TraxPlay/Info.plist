@@ -43,5 +43,45 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <!-- GPX File Begin -->
+    <!-- Support document types -->
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeIconFiles</key><array/>
+            <key>CFBundleTypeName</key><string>GPX File</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>com.happyguy.gpx</string>
+            </array>
+        </dict>
+    </array>
+    <!-- Imported Type UTIs -->
+    <key>UTImportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.xml</string>
+            </array>
+            <key>UTTypeDescription</key><string>GPX File</string>
+            <key>UTTypeIdentifier</key><string>com.happyguy.gpx</string>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.filename-extension</key>
+                <array>
+                    <string>gpx</string>
+                </array>
+            </dict>
+        </dict>
+    </array>
+    <!-- The lazy option is ONLY for development (works using HTTP over HTTPS) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--Include to allow all connections (DANGER)-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <!-- GPX File End -->
 </dict>
 </plist>

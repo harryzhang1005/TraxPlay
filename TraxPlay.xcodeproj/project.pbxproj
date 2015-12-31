@@ -12,6 +12,12 @@
 		FAD690D81C342BAB00F34F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD690D61C342BAB00F34F01 /* Main.storyboard */; };
 		FAD690DA1C342BAB00F34F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD690D91C342BAB00F34F01 /* Assets.xcassets */; };
 		FAD690DD1C342BAB00F34F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD690DB1C342BAB00F34F01 /* LaunchScreen.storyboard */; };
+		FAD690E51C342BE600F34F01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD690E41C342BE600F34F01 /* MapKit.framework */; };
+		FAD690EA1C3451E900F34F01 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD690E91C3451E900F34F01 /* GPX.swift */; };
+		FAD690EC1C3452A100F34F01 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD690EB1C3452A100F34F01 /* ImageViewController.swift */; };
+		FAD690EE1C34588300F34F01 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD690ED1C34588300F34F01 /* MKGPX.swift */; };
+		FAD690F01C34896C00F34F01 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD690EF1C34896C00F34F01 /* Constants.swift */; };
+		FAD690F21C34C1A500F34F01 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD690F11C34C1A500F34F01 /* EditWaypointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		FAD690D91C342BAB00F34F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD690DC1C342BAB00F34F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD690DE1C342BAB00F34F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD690E41C342BE600F34F01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAD690E91C3451E900F34F01 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		FAD690EB1C3452A100F34F01 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		FAD690ED1C34588300F34F01 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
+		FAD690EF1C34896C00F34F01 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAD690F11C34C1A500F34F01 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD690E51C342BE600F34F01 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +51,7 @@
 		FAD690C61C342BAB00F34F01 = {
 			isa = PBXGroup;
 			children = (
+				FAD690E41C342BE600F34F01 /* MapKit.framework */,
 				FAD690D11C342BAB00F34F01 /* TraxPlay */,
 				FAD690D01C342BAB00F34F01 /* Products */,
 			);
@@ -54,14 +68,43 @@
 		FAD690D11C342BAB00F34F01 /* TraxPlay */ = {
 			isa = PBXGroup;
 			children = (
+				FAD690E81C342D3400F34F01 /* Controller */,
+				FAD690E71C342D2D00F34F01 /* View */,
+				FAD690E61C342D2600F34F01 /* Model */,
 				FAD690D21C342BAB00F34F01 /* AppDelegate.swift */,
-				FAD690D41C342BAB00F34F01 /* ViewController.swift */,
-				FAD690D61C342BAB00F34F01 /* Main.storyboard */,
 				FAD690D91C342BAB00F34F01 /* Assets.xcassets */,
 				FAD690DB1C342BAB00F34F01 /* LaunchScreen.storyboard */,
 				FAD690DE1C342BAB00F34F01 /* Info.plist */,
 			);
 			path = TraxPlay;
+			sourceTree = "<group>";
+		};
+		FAD690E61C342D2600F34F01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD690E91C3451E900F34F01 /* GPX.swift */,
+				FAD690ED1C34588300F34F01 /* MKGPX.swift */,
+				FAD690EF1C34896C00F34F01 /* Constants.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FAD690E71C342D2D00F34F01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAD690D61C342BAB00F34F01 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FAD690E81C342D3400F34F01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAD690D41C342BAB00F34F01 /* ViewController.swift */,
+				FAD690EB1C3452A100F34F01 /* ImageViewController.swift */,
+				FAD690F11C34C1A500F34F01 /* EditWaypointViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +180,11 @@
 			files = (
 				FAD690D51C342BAB00F34F01 /* ViewController.swift in Sources */,
 				FAD690D31C342BAB00F34F01 /* AppDelegate.swift in Sources */,
+				FAD690F21C34C1A500F34F01 /* EditWaypointViewController.swift in Sources */,
+				FAD690EC1C3452A100F34F01 /* ImageViewController.swift in Sources */,
+				FAD690EA1C3451E900F34F01 /* GPX.swift in Sources */,
+				FAD690EE1C34588300F34F01 /* MKGPX.swift in Sources */,
+				FAD690F01C34896C00F34F01 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
